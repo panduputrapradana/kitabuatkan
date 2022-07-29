@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+    	.hamburger-line {
+    		@apply w-[28px] h-[2px] bg-white hover:bg-slate-300 block my-2;
+		}
+
+		.hamburger-active {
+			@apply bg-red-700 relative pl-2 rounded-md transition duration-300;
+		}
+
+		.hamburger-active > span:nth-child(1){
+			@apply  rotate-45; 
+		}
+
+		.hamburger-active > span:nth-child(2){
+			@apply scale-0; 
+		}
+
+		.hamburger-active > span:nth-child(3){
+			@apply -rotate-45; 
+		}
+
+		.navbar-fixed {
+			@apply fixed z-[9999] duration-500;
+		}
+    }
